@@ -1,23 +1,28 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=121212&height=180§ion=header&text=MUHAMMED%20MUSTHAFA%20K%20C&fontSize=32&fontColor=E0E0E0&fontAlignY=40&desc=GENERATIVE%20AI%20DEVELOPER&descSize=14&descAlignY=65&descColor=888888" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0a0e12&height=180&section=header&text=MUHAMMED%20MUSTHAFA%20K%20C&fontSize=32&fontColor=00F0FF&fontAlignY=40&desc=GENERATIVE%20AI%20DEVELOPER&descSize=14&descAlignY=65&descColor=E0E0E0" width="100%" />
 
 <p align="center">
   <em>Computer Science graduate focused on Python development, Large Language Model integration, and building practical AI-powered applications.</em>
 </p>
 
 <a href="https://mohmusthafa10-oss.github.io/My-Portfolio/">
-<img src="https://img.shields.io/badge/PORTFOLIO-1E1E1E?style=for-the-badge&logo=googlechrome&logoColor=E0E0E0&border=333333" />
+<img src="https://img.shields.io/badge/PORTFOLIO-121212?style=for-the-badge&logo=googlechrome&logoColor=00F0FF&border=00F0FF" />
 </a>
 <a href="https://linkedin.com/in/moh-musthafa/">
-<img src="https://img.shields.io/badge/LINKEDIN-1E1E1E?style=for-the-badge&logo=linkedin&logoColor=E0E0E0" />
+<img src="https://img.shields.io/badge/LINKEDIN-121212?style=for-the-badge&logo=linkedin&logoColor=00F0FF" />
 </a>
 <a href="https://github.com/mohmusthafa10-oss">
-<img src="https://img.shields.io/badge/GITHUB-1E1E1E?style=for-the-badge&logo=github&logoColor=E0E0E0" />
+<img src="https://img.shields.io/badge/GITHUB-121212?style=for-the-badge&logo=github&logoColor=00F0FF" />
 </a>
 <a href="mailto:mohmusthafa10@gmail.com">
-<img src="https://img.shields.io/badge/EMAIL-1E1E1E?style=for-the-badge&logo=gmail&logoColor=E0E0E0" />
+<img src="https://img.shields.io/badge/EMAIL-121212?style=for-the-badge&logo=gmail&logoColor=00F0FF" />
 </a>
+
+<br><br>
+
+<!-- 3D ANIMATED SCI-FI HUD CORE -->
+<img src="./hud-core.svg" alt="3D Holographic AI HUD" width="100%" />
 
 </div>
 
@@ -31,7 +36,7 @@
 
 <br>
 
-🔴 **B.Sc. Computer Science**  
+🔵 **B.Sc. Computer Science**  
 *Morazha Co-operative Arts and Science College*  
 `2023 – 2026`  
 > Grade: **72.04%**  
@@ -53,7 +58,7 @@
 
 **PROGRAMMING & LANGUAGES**
 <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px;">
-  <img src="https://img.shields.io/badge/Python-1E1E1E?style=flat-square&logo=python&logoColor=3776AB" />
+  <img src="https://img.shields.io/badge/Python-1E1E1E?style=flat-square&logo=python&logoColor=00F0FF" />
   <img src="https://img.shields.io/badge/JavaScript-1E1E1E?style=flat-square&logo=javascript&logoColor=F7DF1E" />
   <img src="https://img.shields.io/badge/HTML5-1E1E1E?style=flat-square&logo=html5&logoColor=E34F26" />
   <img src="https://img.shields.io/badge/CSS3-1E1E1E?style=flat-square&logo=css3&logoColor=1572B6" />
@@ -63,8 +68,8 @@
 
 **AI & INTEGRATIONS**
 <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px;">
-  <img src="https://img.shields.io/badge/Gemini_API-1E1E1E?style=flat-square&logo=google&logoColor=4285F4" />
-  <img src="https://img.shields.io/badge/LLM_Integration-1E1E1E?style=flat-square&logo=openai&logoColor=412991" />
+  <img src="https://img.shields.io/badge/Gemini_API-1E1E1E?style=flat-square&logo=google&logoColor=00F0FF" />
+  <img src="https://img.shields.io/badge/LLM_Integration-1E1E1E?style=flat-square&logo=openai&logoColor=00F0FF" />
   <img src="https://img.shields.io/badge/REST_APIs-1E1E1E?style=flat-square&logo=postman&logoColor=FF6C37" />
 </div>
 
@@ -73,7 +78,7 @@
 **TOOLS & WORKFLOWS**
 <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px;">
   <img src="https://img.shields.io/badge/Git-1E1E1E?style=flat-square&logo=git&logoColor=F05032" />
-  <img src="https://img.shields.io/badge/GitHub-1E1E1E?style=flat-square&logo=github&logoColor=ffffff" />
+  <img src="https://img.shields.io/badge/GitHub-1E1E1E?style=flat-square&logo=github&logoColor=00F0FF" />
   <img src="https://img.shields.io/badge/VS_Code-1E1E1E?style=flat-square&logo=visualstudiocode&logoColor=007ACC" />
 </div>
 
@@ -99,7 +104,7 @@ An intelligent mental wellness web application providing conversational support,
 
 <br>
 <a href="https://github.com/mohmusthafa10-oss?tab=repositories">
-<img src="https://img.shields.io/badge/EXPLORE_PROJECT-1E1E1E?style=for-the-badge&logo=github&logoColor=ffffff" />
+<img src="https://img.shields.io/badge/EXPLORE_PROJECT-121212?style=for-the-badge&logo=github&logoColor=00F0FF" />
 </a>
 
 </td>
@@ -115,7 +120,7 @@ A dynamic web development client interface built to browse, filter, and explore 
 
 <br>
 <a href="https://github.com/mohmusthafa10-oss?tab=repositories">
-<img src="https://img.shields.io/badge/EXPLORE_PROJECT-1E1E1E?style=for-the-badge&logo=github&logoColor=ffffff" />
+<img src="https://img.shields.io/badge/EXPLORE_PROJECT-121212?style=for-the-badge&logo=github&logoColor=00F0FF" />
 </a>
 
 </td>
@@ -132,7 +137,7 @@ An application designed to support automated logistics lead assessment, data str
 
 <br>
 <a href="https://github.com/mohmusthafa10-oss?tab=repositories">
-<img src="https://img.shields.io/badge/EXPLORE_PROJECT-1E1E1E?style=for-the-badge&logo=github&logoColor=ffffff" />
+<img src="https://img.shields.io/badge/EXPLORE_PROJECT-121212?style=for-the-badge&logo=github&logoColor=00F0FF" />
 </a>
 
 </td>
@@ -145,11 +150,11 @@ An application designed to support automated logistics lead assessment, data str
 
 <div align="center">
 
-<img src="https://img.shields.io/badge/Generative_AI-1E1E1E?style=for-the-badge&color=222" />
-<img src="https://img.shields.io/badge/LLM_Applications-1E1E1E?style=for-the-badge&color=222" />
-<img src="https://img.shields.io/badge/Workflow_Automation-1E1E1E?style=for-the-badge&color=222" />
-<img src="https://img.shields.io/badge/API_Integration-1E1E1E?style=for-the-badge&color=222" />
-<img src="https://img.shields.io/badge/System_Design-1E1E1E?style=for-the-badge&color=222" />
+<img src="https://img.shields.io/badge/Generative_AI-121212?style=for-the-badge&color=121212&labelColor=00F0FF" />
+<img src="https://img.shields.io/badge/LLM_Applications-121212?style=for-the-badge&color=121212&labelColor=00F0FF" />
+<img src="https://img.shields.io/badge/Workflow_Automation-121212?style=for-the-badge&color=121212&labelColor=00F0FF" />
+<img src="https://img.shields.io/badge/API_Integration-121212?style=for-the-badge&color=121212&labelColor=00F0FF" />
+<img src="https://img.shields.io/badge/System_Design-121212?style=for-the-badge&color=121212&labelColor=00F0FF" />
 
 </div>
 
@@ -157,7 +162,7 @@ An application designed to support automated logistics lead assessment, data str
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=121212&height=100§ion=footer&text=BUILDING%20.%20LEARNING%20.%20EXPLORING&fontSize=18&fontColor=E0E0E0&fontAlignY=50" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0a0e12&height=100&section=footer&text=BUILDING%20.%20LEARNING%20.%20EXPLORING&fontSize=18&fontColor=00F0FF&fontAlignY=50" width="100%" />
 
 <p><em>Interested in developing practical AI applications and solving real-world problems through technology.</em></p>
 
