@@ -1,0 +1,266 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 280" width="100%" height="280">
+  <defs>
+    <!-- Glowing Cyan Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="strong-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur1" />
+      <feGaussianBlur stdDeviation="3" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur1" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#061a23" />
+      <stop offset="60%" stop-color="#0a0e12" />
+      <stop offset="100%" stop-color="#121212" />
+    </radialGradient>
+
+    <linearGradient id="cyan-fade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0" />
+      <stop offset="50%" stop-color="#00f0ff" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0" />
+    </linearGradient>
+
+    <style>
+      .bg { fill: url(#bg-grad); rx: 12px; stroke: #00f0ff; stroke-width: 1; stroke-opacity: 0.3; }
+      .hud-text { font-family: 'Courier New', Courier, monospace; fill: #00f0ff; font-size: 11px; letter-spacing: 1.5px; }
+      .hud-title { font-family: 'Courier New', Courier, monospace; fill: #00f0ff; font-size: 13px; font-weight: bold; letter-spacing: 2px; }
+      .hud-dim { fill: #00f0ff; opacity: 0.45; }
+      
+      /* 3D Perspective Tilted Rings */
+      .perspective-stage {
+        transform: translate(425px, 145px) scaleY(0.76);
+      }
+      .ring-cw-slow { animation: spinCW 18s linear infinite; }
+      .ring-ccw-med { animation: spinCCW 12s linear infinite; }
+      .ring-cw-fast { animation: spinCW 6s linear infinite; }
+      .ring-ccw-slow { animation: spinCCW 24s linear infinite; }
+      .pulse-core { animation: pulse 3s ease-in-out infinite; }
+      .scanline { animation: scan 4s linear infinite; }
+      .blink { animation: blinkAnim 2s infinite; }
+
+      @keyframes spinCW { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+      @keyframes spinCCW { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
+      @keyframes pulse {
+        0%, 100% { transform: scale(0.95); opacity: 0.8; }
+        50% { transform: scale(1.08); opacity: 1; }
+      }
+      @keyframes scan {
+        0% { transform: translateY(-120px); opacity: 0; }
+        50% { opacity: 0.5; }
+        100% { transform: translateY(120px); opacity: 0; }
+      }
+      @keyframes blinkAnim {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.2; }
+      }
+    </style>
+  </defs>
+
+  <!-- Main Background Panel -->
+  <rect width="846" height="276" x="2" y="2" class="bg" />
+
+  <!-- Subtle Background Grid & Particles -->
+  <g stroke="#00f0ff" stroke-opacity="0.07" stroke-width="1">
+    <line x1="0" y1="70" x2="850" y2="70" />
+    <line x1="0" y1="140" x2="850" y2="140" />
+    <line x1="0" y1="210" x2="850" y2="210" />
+    <line x1="212" y1="0" x2="212" y2="280" />
+    <line x1="425" y1="0" x2="425" y2="280" />
+    <line x1="637" y1="0" x2="637" y2="280" />
+  </g>
+
+  <!-- Ambient Floating Particles -->
+  <g fill="#00f0ff">
+    <circle cx="150" cy="60" r="1.5" opacity="0.5" class="blink" />
+    <circle cx="280" cy="220" r="2" opacity="0.3" />
+    <circle cx="580" cy="75" r="1.5" opacity="0.6" class="blink" />
+    <circle cx="710" cy="200" r="2" opacity="0.4" />
+    <circle cx="340" cy="50" r="1" opacity="0.7" />
+    <circle cx="520" cy="230" r="1.5" opacity="0.5" />
+  </g>
+
+  <!-- Top Mini Circular HUD Icons (Inspired by Reference Top Bar) -->
+  <g transform="translate(265, 24)" filter="url(#glow)" stroke="#00f0ff" fill="none">
+    <g transform="translate(0,0)">
+      <circle cx="0" cy="0" r="12" stroke-opacity="0.6" />
+      <circle cx="0" cy="0" r="8" stroke-dasharray="10 6" class="ring-cw-fast" />
+    </g>
+    <g transform="translate(40,0)">
+      <circle cx="0" cy="0" r="12" stroke-opacity="0.6" />
+      <polygon points="0,-6 6,5 -6,5" fill="#00f0ff" fill-opacity="0.5" />
+    </g>
+    <g transform="translate(80,0)">
+      <circle cx="0" cy="0" r="12" stroke-opacity="0.6" />
+      <circle cx="0" cy="0" r="5" fill="#00f0ff" fill-opacity="0.7" class="pulse-core" />
+    </g>
+    <g transform="translate(120,0)">
+      <circle cx="0" cy="0" r="12" stroke-opacity="0.6" />
+      <circle cx="0" cy="0" r="8" stroke-dasharray="16 8" class="ring-ccw-med" />
+    </g>
+    <g transform="translate(160,0)">
+      <circle cx="0" cy="0" r="12" stroke-opacity="0.6" />
+      <rect x="-5" y="-5" width="10" height="10" transform="rotate(45)" stroke="#00f0ff" />
+    </g>
+    <g transform="translate(200,0)">
+      <circle cx="0" cy="0" r="12" stroke-opacity="0.6" />
+      <circle cx="0" cy="0" r="8" stroke-dasharray="6 4" class="ring-cw-slow" />
+    </g>
+    <g transform="translate(240,0)">
+      <circle cx="0" cy="0" r="12" stroke-opacity="0.6" />
+      <path d="M-6,0 L6,0 M0,-6 L0,6" stroke="#00f0ff" />
+    </g>
+    <g transform="translate(280,0)">
+      <circle cx="0" cy="0" r="12" stroke-opacity="0.6" />
+      <circle cx="0" cy="0" r="7" stroke-dasharray="22 12" class="ring-ccw-med" />
+    </g>
+    <g transform="translate(320,0)">
+      <circle cx="0" cy="0" r="12" stroke-opacity="0.6" />
+      <circle cx="0" cy="0" r="3" fill="#00f0ff" />
+    </g>
+  </g>
+
+  <!-- Circuit Traces Left & Right -->
+  <g stroke="#00f0ff" fill="none" stroke-width="1.2" opacity="0.55" filter="url(#glow)">
+    <polyline points="20,90 180,90 210,120 300,120" />
+    <circle cx="300" cy="120" r="2.5" fill="#00f0ff" />
+    <polyline points="40,190 190,190 220,165 295,165" />
+    <circle cx="295" cy="165" r="2.5" fill="#00f0ff" />
+
+    <polyline points="830,90 670,90 640,120 550,120" />
+    <circle cx="550" cy="120" r="2.5" fill="#00f0ff" />
+    <polyline points="810,190 660,190 630,165 555,165" />
+    <circle cx="555" cy="165" r="2.5" fill="#00f0ff" />
+  </g>
+
+  <!-- ==================== 3D CENTRAL HOLOGRAPHIC CORE ==================== -->
+  <!-- Outer Shadow Ring for 3D Depth -->
+  <g transform="translate(425, 154) scaleY(0.76)" opacity="0.25" stroke="#0088aa" fill="none">
+    <circle cx="0" cy="0" r="118" stroke-width="2" stroke-dasharray="80 20 40 20" class="ring-cw-slow" />
+    <circle cx="0" cy="0" r="88" stroke-width="4" stroke-dasharray="50 30" class="ring-ccw-med" />
+  </g>
+
+  <!-- Primary 3D Perspective Stage -->
+  <g class="perspective-stage" filter="url(#glow)" fill="none" stroke="#00f0ff">
+    <!-- Ring 1: Outer Degree Scale -->
+    <g class="ring-cw-slow">
+      <circle cx="0" cy="0" r="122" stroke-width="1" stroke-opacity="0.4" />
+      <circle cx="0" cy="0" r="116" stroke-width="2.5" stroke-dasharray="90 25 40 25 110 30" />
+      <circle cx="0" cy="0" r="109" stroke-width="1" stroke-dasharray="2 8" stroke-opacity="0.7" />
+    </g>
+
+    <!-- Ring 2: Thick Segmented Armor Ring -->
+    <g class="ring-ccw-med">
+      <circle cx="0" cy="0" r="94" stroke-width="6" stroke-dasharray="65 35 20 15 80 40" stroke-opacity="0.75" />
+      <circle cx="0" cy="0" r="85" stroke-width="1.5" stroke-dasharray="120 60" />
+    </g>
+
+    <!-- Ring 3: High-Speed Telemetry Ring -->
+    <g class="ring-cw-fast">
+      <circle cx="0" cy="0" r="72" stroke-width="3" stroke-dasharray="30 55 10 15 45 60" />
+      <circle cx="0" cy="0" r="65" stroke-width="1" stroke-dasharray="4 6" stroke-opacity="0.8" />
+      <line x1="-75" y1="0" x2="-60" y2="0" stroke-width="2" />
+      <line x1="60" y1="0" x2="75" y2="0" stroke-width="2" />
+    </g>
+
+    <!-- Ring 4: Inner Gimbal -->
+    <g class="ring-ccw-slow">
+      <circle cx="0" cy="0" r="50" stroke-width="4" stroke-dasharray="40 20 10 20" stroke-opacity="0.85" />
+      <circle cx="0" cy="0" r="41" stroke-width="1.2" stroke-dasharray="80 40" />
+    </g>
+
+    <!-- Center Glowing AI Energy Core -->
+    <g class="pulse-core" filter="url(#strong-glow)">
+      <circle cx="0" cy="0" r="26" fill="#00f0ff" fill-opacity="0.18" stroke-width="2" />
+      <circle cx="0" cy="0" r="14" fill="#00f0ff" fill-opacity="0.5" stroke-width="1.5" />
+      <circle cx="0" cy="0" r="5" fill="#e0ffff" />
+    </g>
+
+    <!-- Scanning Laser Beam -->
+    <line x1="-130" y1="0" x2="130" y2="0" stroke="url(#cyan-fade)" stroke-width="2" class="scanline" />
+  </g>
+
+  <!-- Floating Callout Labels on Core -->
+  <g stroke="#00f0ff" stroke-width="1" fill="none" opacity="0.8">
+    <polyline points="385,95 355,68 295,68" />
+    <text x="295" y="63" class="hud-text" font-size="9">CORE // LLM_ENGINE</text>
+    
+    <polyline points="465,190 495,215 565,215" />
+    <text x="500" y="228" class="hud-text" font-size="9">GEN_AI // ACTIVE</text>
+  </g>
+
+  <!-- ==================== LEFT HUD PANEL: SYSTEM METRICS ==================== -->
+  <g transform="translate(28, 115)">
+    <text x="0" y="-12" class="hud-title">SYS.TELEMETRY</text>
+    
+    <!-- Gauge 1: Python / AI Core -->
+    <g transform="translate(32, 35)" filter="url(#glow)">
+      <circle cx="0" cy="0" r="24" fill="none" stroke="#00f0ff" stroke-width="2" stroke-opacity="0.2" />
+      <circle cx="0" cy="0" r="24" fill="none" stroke="#00f0ff" stroke-width="3.5" stroke-dasharray="125 40" class="ring-cw-slow" />
+      <text x="-12" y="4" class="hud-text" font-size="10">92%</text>
+      <text x="-22" y="38" class="hud-text" font-size="9">AI_STACK</text>
+    </g>
+
+    <!-- Gauge 2: Memory / Context -->
+    <g transform="translate(105, 35)" filter="url(#glow)">
+      <circle cx="0" cy="0" r="24" fill="none" stroke="#00f0ff" stroke-width="2" stroke-opacity="0.2" />
+      <circle cx="0" cy="0" r="24" fill="none" stroke="#00f0ff" stroke-width="3.5" stroke-dasharray="105 55" class="ring-ccw-med" />
+      <text x="-12" y="4" class="hud-text" font-size="10">80%</text>
+      <text x="-20" y="38" class="hud-text" font-size="9">LLM_CTX</text>
+    </g>
+
+    <!-- Gauge 3: API Uptime -->
+    <g transform="translate(178, 35)" filter="url(#glow)">
+      <circle cx="0" cy="0" r="24" fill="none" stroke="#00f0ff" stroke-width="2" stroke-opacity="0.2" />
+      <circle cx="0" cy="0" r="24" fill="none" stroke="#00f0ff" stroke-width="3.5" stroke-dasharray="135 25" class="ring-cw-fast" />
+      <text x="-12" y="4" class="hud-text" font-size="10">99%</text>
+      <text x="-18" y="38" class="hud-text" font-size="9">UPTIME</text>
+    </g>
+
+    <text x="0" y="108" class="hud-text hud-dim">STATUS: ONLINE // NODE_2026</text>
+    <text x="0" y="124" class="hud-text hud-dim">LOC: KERALA, IN // 32°C</text>
+  </g>
+
+  <!-- ==================== RIGHT HUD PANEL: AI MODULES ==================== -->
+  <g transform="translate(615, 65)">
+    <!-- Hexagonal / Tech Border Box -->
+    <polygon points="0,0 195,0 208,13 208,175 195,188 0,188" fill="#041218" fill-opacity="0.7" stroke="#00f0ff" stroke-width="1.2" stroke-opacity="0.6" filter="url(#glow)" />
+    
+    <text x="14" y="24" class="hud-title">ACTIVE MODULES</text>
+    <line x1="14" y1="32" x2="190" y2="32" stroke="#00f0ff" stroke-opacity="0.4" />
+
+    <g transform="translate(14, 52)">
+      <circle cx="5" cy="-4" r="3" fill="#00f0ff" class="blink" />
+      <text x="16" y="0" class="hud-text">GEMINI_API_V2</text>
+      <rect x="0" y="8" width="145" height="4" fill="#00f0ff" opacity="0.8" />
+      <rect x="0" y="8" width="175" height="4" fill="#00f0ff" opacity="0.2" />
+    </g>
+
+    <g transform="translate(14, 86)">
+      <circle cx="5" cy="-4" r="3" fill="#00f0ff" />
+      <text x="16" y="0" class="hud-text">PYTHON_AUTOMATION</text>
+      <rect x="0" y="8" width="160" height="4" fill="#00f0ff" opacity="0.8" />
+      <rect x="0" y="8" width="175" height="4" fill="#00f0ff" opacity="0.2" />
+    </g>
+
+    <g transform="translate(14, 120)">
+      <circle cx="5" cy="-4" r="3" fill="#00f0ff" />
+      <text x="16" y="0" class="hud-text">RAG_WORKFLOWS</text>
+      <rect x="0" y="8" width="130" height="4" fill="#00f0ff" opacity="0.8" />
+      <rect x="0" y="8" width="175" height="4" fill="#00f0ff" opacity="0.2" />
+    </g>
+
+    <g transform="translate(14, 154)">
+      <circle cx="5" cy="-4" r="3" fill="#00f0ff" class="blink" />
+      <text x="16" y="0" class="hud-text">MINDLINK_ENGINE</text>
+      <rect x="0" y="8" width="152" height="4" fill="#00f0ff" opacity="0.8" />
+      <rect x="0" y="8" width="175" height="4" fill="#00f0ff" opacity="0.2" />
+    </g>
+  </g>
+</svg>
